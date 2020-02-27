@@ -50,4 +50,6 @@ response.json()
 ```
 ## Deploy using Docker, Nginx, Gunicorn and MySQL
 
+<code>$ sudo docker-compose up</code>
+
 
