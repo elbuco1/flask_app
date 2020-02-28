@@ -51,8 +51,10 @@ response.json()
 ## Deploy using Docker, Nginx, Gunicorn and MySQL
 To run the app using nginx as web server, gunicorn as application server
 and mysql server. 
-Install docker: https://docs.docker.com/install/linux/docker-ce/ubuntu/
-Install docker-compose: https://docs.docker.com/compose/install/
+* Clone repository: <code>$ git clone https://github.com/elbuco1/flask_app.git</code>
+* To start the app, go in the **flask_app** directory: <code>$ cd flask_app</code>
+* Install docker: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+* Install docker-compose: https://docs.docker.com/compose/install/
 
 then run:
 <code>$ sudo docker-compose up nginx </code>
