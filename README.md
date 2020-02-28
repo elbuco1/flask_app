@@ -53,7 +53,8 @@ To run the app using nginx as web server, gunicorn as application server
 and mysql server. Install docker and docker-compose then run:
 
 <code>$ sudo docker-compose up nginx </code>
-
-or <code>$ sudo docker-compose up -d nginx </code> to run the containers in the background
+or 
+<code>$ sudo docker-compose up -d nginx </code> 
+to run the containers in the background.
 
 
