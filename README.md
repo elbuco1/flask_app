@@ -49,7 +49,11 @@ response = requests.post(request, json = data)
 response.json()
 ```
 ## Deploy using Docker, Nginx, Gunicorn and MySQL
+To run the app using nginx as web server, gunicorn as application server
+and mysql server. Install docker and docker-compose then run:
 
-<code>$ sudo docker-compose up</code>
+<code>$ sudo docker-compose up nginx </code>
+
+or <code>$ sudo docker-compose up -d nginx </code> to run the containers in the background
 
 
