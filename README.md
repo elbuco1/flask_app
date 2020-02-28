@@ -62,4 +62,9 @@ or
 <code>$ sudo docker-compose up -d nginx </code> 
 to run the containers in the background.
 
+To stop all containers:
+<code>$ sudo docker stop $(sudo docker ps -a -q)</code> 
+To remove all containers:
+<code>$ sudo docker rm $(sudo docker ps -a -q)</code> 
+
 
