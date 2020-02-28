@@ -56,15 +56,21 @@ and mysql server.
 * Install docker: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 * Install docker-compose: https://docs.docker.com/compose/install/
 
-then run:
+Then run:
 <code>$ sudo docker-compose up nginx </code>
+
 or 
+
 <code>$ sudo docker-compose up -d nginx </code> 
+
 to run the containers in the background.
 
 To stop all containers:
+
 <code>$ sudo docker stop $(sudo docker ps -a -q)</code> 
+
 To remove all containers:
+
 <code>$ sudo docker rm $(sudo docker ps -a -q)</code> 
 
 
