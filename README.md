@@ -65,6 +65,8 @@ or
 
 to run the containers in the background.
 
+You can find the app on "http://127.0.0.1/movies"
+
 To stop all containers:
 
 <code>$ sudo docker stop $(sudo docker ps -a -q)</code> 
