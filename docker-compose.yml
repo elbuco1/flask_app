@@ -1,13 +1,61 @@
 # docker-compose.yml
 version: '3'
-services:  
+services: 
+  nginx:
+    image: nginx:1.13.7
+    container_name: nginx
+    depends_on:
+      - flask
+    ports:
+        - 80:80
+    volumes:
+        # - ./nginx.conf:/etc/nginx/nginx.conf
+        - ./nginx.conf:/etc/nginx/conf.d/default.conf
+
+  # nginx:
+  #   image: webapp-nginx
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile_nginx
+  #   ports:
+  #     - 80:80
+    
+
   flask:
-    image: webapp-flask
+    image: flask-app
+    container_name: flask
     build:
       context: .
       dockerfile: Dockerfile_flask
+    networks:
+      my-network:
+          aliases:
+              - flask-app
     ports:
-      - "5000:5000"
+      - "8080:5000"
+    volumes:
+      - "./:/app"
+    links:
+      - db
+    
+
+
+  
+  db:
+    image: mysql:5.7
+    ports:
+      - "32000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      # MYSQL_DATABASE: movies
+      # MYSQL_USER: movies
+      # MYSQL_PASSWORD: movies
+#  -e MYSQL_DATABASE=movies -e MYSQL_USER=movies -e MYSQL_PASSWORD=movies
+
+networks:
+  my-network:
+  
+  
     # volumes:
     #   - "./:/app"  nginx:
     # image: webapp-nginx

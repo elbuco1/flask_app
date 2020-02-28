@@ -2,6 +2,7 @@ from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 import logging as lg 
+# from flask_migrate import Migrate
 # from app.models import Movie
 
 
@@ -9,6 +10,7 @@ import logging as lg
 application = Flask(__name__)
 application.config.from_object(Config)
 db = SQLAlchemy(application)
+# migrate = Migrate(application, db)
 
 from app import routes, models
 

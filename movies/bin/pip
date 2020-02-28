@@ -1,4 +1,4 @@
-#!/home/dorsal/Documents/microservices/movies/movies_service/bin/python3
+#!/home/dorsal/Documents/flask_app/movies/bin/python3
 
 # -*- coding: utf-8 -*-
 import re
