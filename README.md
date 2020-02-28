@@ -50,8 +50,11 @@ response.json()
 ```
 ## Deploy using Docker, Nginx, Gunicorn and MySQL
 To run the app using nginx as web server, gunicorn as application server
-and mysql server. Install docker and docker-compose then run:
+and mysql server. 
+Install docker: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+Install docker-compose: https://docs.docker.com/compose/install/
 
+then run:
 <code>$ sudo docker-compose up nginx </code>
 or 
 <code>$ sudo docker-compose up -d nginx </code> 
