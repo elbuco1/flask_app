@@ -7,8 +7,18 @@ The app Movies allows to manage movie informations. Each movie has two attribute
 ## Run locally in a python virtualenv
 * Clone repository: <code>$ git clone https://github.com/elbuco1/flask_app.git</code>
 * To start the app, go in the **flask_app** directory: <code>$ cd flask_app</code>
+* If you want to use a mysql database instead of sqllite then install mysql.
+* If you want to use the sqllite db, then go in **config.py**  uncomment the line 
+```python
+    # SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'.
+```
+and comment the line 
+```python
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://movies:movies@localhost:3306/movies'
+```
 * Create a python3 virtual environment: <code>$ python3 -m venv movies</code>
 * Activate the environment: <code>$ source movies/bin/activate</code>
+* Update pip: <code>$pip install --upgrade pip wheel</code>
 * Install dependencies from requirements.txt file:<code>$ pip install -r requirements.txt</code>
 * Initialize the database:<code>$ flask initdb</code>
 * Run the server: <code>$ flask run</code>

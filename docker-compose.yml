@@ -37,9 +37,9 @@ services:
       - "32000:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
-      # MYSQL_DATABASE: movies
-      # MYSQL_USER: movies
-      # MYSQL_PASSWORD: movies
+      MYSQL_DATABASE: movies
+      MYSQL_USER: movies
+      MYSQL_PASSWORD: movies
 
 networks:
   my-network:
