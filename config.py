@@ -14,7 +14,7 @@ class Config(object):
     if deploy == 'docker':
         SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://movies:movies@db/movies'
     elif deploy == 'mysql_local':
-        SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://movies:movies@localhost:32000/movies'
+        SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://movies:movies@localhost:3306/movies'
     elif deploy == 'sqlite_local':
         SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'
     else:

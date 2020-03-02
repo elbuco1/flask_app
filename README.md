@@ -16,7 +16,7 @@ class Config(object):
 * If you want to use the mysql database, then go in **config.py** and set
 ```python
 class Config(object):
-    deploy = 'sqlite_local'
+    deploy = 'mysql_local'
 ```
 * Create a python3 virtual environment: <code>$ python3 -m venv movies</code>
 * Activate the environment: <code>$ source movies/bin/activate</code>
