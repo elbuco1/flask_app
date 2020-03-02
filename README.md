@@ -10,10 +10,12 @@ The app Movies allows to manage movie informations. Each movie has two attribute
 * If you want to use a mysql database instead of sqlite then install mysql: https://virtualzero.net/blog/install-mysql-for-a-flask-app-on-ubuntu-18.04-lts
 * If you want to use the sqlite db, then go in **config.py** and set
 ```python
+class Config(object):
     deploy = 'sqlite_local'
 ```
 * If you want to use the mysql database, then go in **config.py** and set
 ```python
+class Config(object):
     deploy = 'sqlite_local'
 ```
 * Create a python3 virtual environment: <code>$ python3 -m venv movies</code>
@@ -67,6 +69,7 @@ and mysql server.
 * Install docker-compose: https://docs.docker.com/compose/install/
 * Go in **config.py** and set
 ```python
+class Config(object):
     deploy = 'docker'
 ```
 Then run:
