@@ -7,14 +7,14 @@ The app Movies allows to manage movie informations. Each movie has two attribute
 ## Run locally in a python virtualenv
 * Clone repository: <code>$ git clone https://github.com/elbuco1/flask_app.git</code>
 * To start the app, go in the **flask_app** directory: <code>$ cd flask_app</code>
-* If you want to use a mysql database instead of sqllite then install mysql.
-* If you want to use the sqllite db, then go in **config.py**  uncomment the line 
+* If you want to use a mysql database instead of sqlite then install mysql: https://virtualzero.net/blog/install-mysql-for-a-flask-app-on-ubuntu-18.04-lts
+* If you want to use the sqlite db, then go in **config.py** and set
 ```python
-    # SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'.
+    deploy = 'sqlite_local'
 ```
-and comment the line 
+* If you want to use the mysql database, then go in **config.py** and set
 ```python
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://movies:movies@localhost:3306/movies'
+    deploy = 'sqlite_local'
 ```
 * Create a python3 virtual environment: <code>$ python3 -m venv movies</code>
 * Activate the environment: <code>$ source movies/bin/activate</code>
@@ -65,7 +65,10 @@ and mysql server.
 * To start the app, go in the **flask_app** directory: <code>$ cd flask_app</code>
 * Install docker: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 * Install docker-compose: https://docs.docker.com/compose/install/
-
+* Go in **config.py** and set
+```python
+    deploy = 'docker'
+```
 Then run:
 <code>$ sudo docker-compose up nginx </code>
 

@@ -33,6 +33,7 @@ services:
  
   db:
     image: mysql:5.7
+    container_name: db
     ports:
       - "32000:3306"
     environment:
