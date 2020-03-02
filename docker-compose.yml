@@ -29,11 +29,17 @@ services:
     volumes:
       - "./:/app"
     links:
-      - db
+      - "db:db"
+      # - "db:db_test"
+
  
   db:
     image: mysql:5.7
     container_name: db
+    networks:
+      my-network:
+          aliases:
+              - db
     ports:
       - "32000:3306"
     environment:
