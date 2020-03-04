@@ -22,15 +22,12 @@ services:
       dockerfile: Dockerfile_flask
     networks:
       my-network:
-          aliases:
-              - flask-app
     ports:
       - "8080:5000"
     volumes:
       - "./:/app"
-    links:
-      - "db:db"
-      # - "db:db_test"
+    depends_on:
+      - db
 
  
   db:
@@ -38,8 +35,6 @@ services:
     container_name: db
     networks:
       my-network:
-          aliases:
-              - db
     ports:
       - "32000:3306"
     environment:

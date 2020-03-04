@@ -8,6 +8,23 @@ The app Movies allows to manage movie informations. Each movie has two attribute
 * Clone repository: <code>$ git clone https://github.com/elbuco1/flask_app.git</code>
 * To start the app, go in the **flask_app** directory: <code>$ cd flask_app</code>
 * If you want to use a mysql database instead of sqlite then install mysql: https://virtualzero.net/blog/install-mysql-for-a-flask-app-on-ubuntu-18.04-lts
+
+* If you are using mysql database you need to create a user and a database as follows:
+
+In your terminal: <code>$ sudo mysql -u root -p</code>
+
+In the mysql command line:
+
+<code>mysql> CREATE DATABASE movies; </code>
+
+<code>mysql> CREATE USER 'movies'@'localhost' IDENTIFIED BY 'movies'; </code>
+
+<code>mysql> GRANT ALL PRIVILEGES ON movies.* TO 'movies'@'localhost'; </code>
+
+<code>mysql> FLUSH PRIVILEGES; </code>
+
+
+
 * If you want to use the sqlite db, then go in **config.py** and set
 ```python
 class Config(object):
@@ -22,6 +39,7 @@ class Config(object):
 * Activate the environment: <code>$ source movies/bin/activate</code>
 * Update pip: <code>$pip install --upgrade pip wheel</code>
 * Install dependencies from requirements.txt file:<code>$ pip install -r requirements.txt</code>
+
 * Initialize the database:<code>$ flask initdb</code>
 * Run the server: <code>$ flask run</code>
 
@@ -83,8 +101,12 @@ to run the containers in the background.
 
 You can find the app on "http://127.0.0.1/movies"
 
-To stop all containers:
+## Stopping all docker containers:
 
+To shutdown the app:
+<code>$ sudo docker-compose down</code> 
+
+To stop all containers:
 <code>$ sudo docker stop $(sudo docker ps -a -q)</code> 
 
 To remove all containers:
